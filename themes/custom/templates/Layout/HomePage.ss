@@ -4,7 +4,7 @@
         <div class="center-text">
           <h2 class="card-title">A camera is the save button
           for the mind’s eye</h2>
-          <a href="booking-page" class="btn">
+          <a href="{$BaseHref}booking-page/" class="btn">
             <svg width="201" height="51" viewBox="0 0 201 51">
               <defs>
                 <style>

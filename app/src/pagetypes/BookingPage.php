@@ -31,10 +31,6 @@ namespace {
                 GridFieldConfig_RecordEditor::create()
             ));
 
-
-          
-
-
             return $fields;
         }
     }

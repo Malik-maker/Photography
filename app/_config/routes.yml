@@ -3,6 +3,5 @@ After: framework/_config/routes#coreroutes
 ---
 SilverStripe\Control\Director:
   rules:
-         'booking-page' : 'BookingPageController'
-
-       
+    # 'booking-page' : 'BookingPageController'
+ 

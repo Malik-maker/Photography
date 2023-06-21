@@ -21,15 +21,16 @@ namespace {
         private static $db = [
             'PhotoName' => 'Text',
             'PhotoAbout'=> 'Text'
-           
-           
-
         ];
 
 
         private static $has_one = [
             'BookingPage' => BookingPage::class,
             'BookingPhoto' => Image::class,
+        ];
+
+        private static $has_many = [
+            'Bookings' => Booking::class
         ];
 
 

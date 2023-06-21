@@ -56,5 +56,31 @@ namespace {
             // You can include any CSS or JS required by your project here.
             // See: https://docs.silverstripe.org/en/developer_guides/templates/requirements/
         }
+
+
+        public function setSessionMessage($message, $type = 'success')
+        {
+            $session = $this->getRequest()->getSession();
+            $session->set("Page.message", $message);
+            $session->set("Page.messageType", $type);
+        }
+
+        public function SessionMessage()
+        {
+
+            $session = $this->getRequest()->getSession();
+
+            $Message = $session->get('Page.message');
+            $Type = $session->get('Page.messageType');
+
+            $session->clear('Page.message');
+            $session->clear('Page.messageType');
+
+            if ($Message) {
+                return new ArrayData(compact('Message', 'Type'));
+            }
+
+            return false;
+        }
     }
 }
